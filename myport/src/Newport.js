@@ -24,7 +24,7 @@ function Header() {
       <div className="header-content">
         <img src="https://img.freepik.com/free-vector/trademark_53876-59932.jpg?t=st=1719476413~exp=1719480013~hmac=96401a27a9c705d029607e2d8f12a236aa3318b060a6ce914be33e278f889cc9&w=740" alt="Profile Photo of Rama Mohan" />
         <h1 style={{color:"white"}}>Hi, my name is Rama Mohan Vithala</h1>
-        <p style={{color:"white"}}>Web Developer | UI Developer| Tech Enthusiast | Full stack developer</p>
+        <p style={{color:'white'}}>Web Developer | UI Developer| Tech Enthusiast | Full stack developer</p>
       </div>
     </header>
   );
@@ -74,8 +74,40 @@ function Portfolio() {
 function Contact() {
   return (
     <section id="contact">
-      <h2>~ Keep in Touch ~</h2>
-      <button className="btn btn-default td-btn outline white">Send me a message!</button>
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Contact Me</h1>
+
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                   
+                    <div style={{maxwidth:"100%",overflow:"hidden",color:"red",width:"500px",height:"500px"}}>
+                        <div id="embedmap-canvas" style={{height:"100%", width:"100%",maxwidth:"100%"}}>
+                            <iframe style={{height:"100%",width:"100%",border:"0"}} frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487293.47787204565!2d78.07836299470652!3d17.41273323120619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1719483552320!5m2!1sen!2sin">
+                            </iframe>
+                        </div>
+                        <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+                        {/* <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
+                        </style> */}
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                  <div className='card'>
+                    
+                    <form>
+                        <input type="text" class="form-control form-control-lg" placeholder="Name"/><br/>
+                        <input type="email" class="form-control mt-3" placeholder="Email"/><br/>
+                        <input type="text" class="form-control mt-3" placeholder="Subject"/><br/>
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details" style={{width:"8cm",borderRadius:"5px"}}></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="button type1">Contact Me</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
   );
 }
